@@ -32,6 +32,8 @@ footer {
      color: white; 
      padding: 40px 0;
 }
+
+
 .btn-contato{
     background-color: #eea1a6 !important;
     color: #fff;
@@ -46,15 +48,13 @@ h2{
     color: #000;
 }
 
-ol li{
-    color: #fff;
-    list-style: disc;
-}
+
 
 h3{
     color: #fff;
-    height: 15%;
+    min-height: 15%;
     align-items: end;
+    font-size: 1.1rem !important;
 }
 
 .h3-fiscal{
@@ -71,22 +71,76 @@ header{
     height: 400px;
 }
 
-
+span{
+    color: #eea1a6;
+}
 
 
 .img-content{
     position: absolute;
     top: -40px;
-    right:20px;
+    
     height: 50px;
     width: 50px;
 }
 
+
+
+
 ol li{
     list-style: disc;
-    font-size: .82rem;
+    font-size: 1rem;
     color: #fff;
 }
+
+
+/* teste de transição */
+@media(min-width:1100px){
+.card-service {
+    position: relative;
+    min-height: 300px;
+    
+    /* padding: 20px; */
+    /* border: 1px solid #ccc; */
+    overflow: auto;
+}
+
+/* Título centralizado inicialmente */
+.card-service h3 {
+     width: max-content;
+    position: absolute;
+    margin: 0 1rem;
+    width: 80%;
+    top: 40%;
+    left: 5%;
+    /* transform: translate(-50%, -50%); */
+    transition: all 0.4s ease;
+}
+
+/* Lista escondida */
+.card-service ol {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    margin-top: 60px;
+}
+
+/* Hover */
+.card-service:hover h3 {
+    top:10px;
+    /* left: 20px; */
+    
+}
+
+.card-service:hover ol {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+/* --------------------- */
+
+
 
 .img-logo-footer{
     position:relative;
